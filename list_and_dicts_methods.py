@@ -46,22 +46,32 @@ my_car = {"make": "Tesla", "model": "Cybertruck", "year": "2022"}
 # Use the .get() method on the my_car dictionary to search for the "car_type" key. Set it equal
 # to a variable called "c_type". If that key doesn't exist, have the .get() method return
 # "type doesn't exist". Print that variable.
+c_type = my_car.get("car type", "Does not exist.")
+print (c_type)
 
 # TODO: Section 3.2:
 # Next add a key/value pair of "car_type": "Electric" to the above "my_car" dictionary
+my_car["car_type"] = "Electric"
 
 # TODO: Section 3.3:
 # Use the .pop() method to remove the "year" key/value pair from the "my_car" dict and set it equal
 # to a variable called "year". Print the "year" variable and print the "my_car" dictionary.
+year = my_car.pop("year")
+print (year)
 
 # TODO: Section 3.4:
 automobile_attributes = ['color', 'engine', 'door count']
 
 # Append a string "make" to the automobile_attributes list. Set a variable called "car_make" equal
 # to the last item in the newly updated list.
+automobile_attributes.append("make")
+car_make = automobile_attributes[3]
+print (car_make)
+
 
 # Now, since "car_make" will be equal to a string of "make". You can use that variable to find the
 # value of the key/value pair in the "my_car" dictionary using the format "dict[key]".
+print(my_car[car_make])
 
 # TODO: Section 3.5:
 # Print the output of "car_make" to access that value. (Ex: print(dict_name[var_with_key]))
