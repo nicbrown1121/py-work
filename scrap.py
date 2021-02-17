@@ -1,25 +1,14 @@
-programming_languages = {"lang_one": "Python", "lang_two": "Java"}
-print(programming_languages)
+import random
+# You can import data or functions from files that you yourself defined. In this folder theres a
+# file called importable_stuff.py . Let's import the file and use things from it. As you learned in
+# Section 1, below is the most straight forward way to import a file.
+import importable_stuff
 
-# Here you can see that the len() function calculates the number of key/value pairs in a dictionary.
-print(f"The programming language dictionary's length is {len(programming_languages)}")
-programming_languages["lang_three"] = "CSharp"
-print(f"After adding a key/value pair: {programming_languages}")
-programming_languages["lang_two"] = "Golang"
-print(f"post golang {programming_languages}")
+# Then, to access the constant `DAYS_OF_WEEK` from that file,
+# you would do so with "dot notation" just like in section 1. In this import case,
+# we can find the constant by using:
+print(f"Normal dot notation: {importable_stuff.DAYS_OF_WEEK}")
 
-
-lang_two = programming_languages.pop("lang_two")
-print(f"lang_two is equal to: {lang_two}")
-print(f"post pop 2: programming_languages is equal to: {programming_languages}")
-
-# The get method will find a value for a key in a dictionary.
-example_dict = {"num_one": 10, "num_two": 20, "num_three": 30}
-second_value = example_dict.get("num_two")
-print(second_value)
-fourth_value = example_dict.get("num_four")
-print(fourth_value)
-
-# You can also specify a return value if the key does not exist in the dictionary.
-fourth_value = example_dict.get("num_four", "Does not exist.")
-print(fourth_value)
+# You could also rename imports such as:
+import importable_stuff as stuff # Now this import can be referred to going forward as "stuff".
+print(f"Renaming as stuff: {stuff.DAYS_OF_WEEK}")
